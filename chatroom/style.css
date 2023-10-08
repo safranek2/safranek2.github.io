@@ -1,32 +1,21 @@
+html,
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    height: 100vh;
 }
 
-h1 {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+#title {
+    height: 8vh;
 }
 
 #chat {
-    height: 300px;
+    min-height: 84vh;
+    max-height: 84vh;
     overflow-y: scroll;
-    border: 1px solid #ccc;
     padding: 10px;
 }
 
-#message {
-    width: 80%;
-    padding: 5px;
-}
-
-#send {
-    padding: 5px 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+#send-group {
+    height: 8vh;
 }
