@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const chat = document.getElementById("chat");
     const messageInput = document.getElementById("message");
     const sendButton = document.getElementById("send");
@@ -11,7 +11,7 @@ $(document).ready(function() {
         messagingSenderId: "98215758452",
         appId: "1:98215758452:web:2a1c251fbe8ac6ccc29f21",
         measurementId: "G-N5MEMETX4S"
-      };
+    };
 
     firebase.initializeApp(firebaseConfig);
 
