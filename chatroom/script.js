@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     function updateChat() {
         $.ajax({
-            url: "get_messages.php",
+            url: "messages.txt",
             type: "GET",
             success: function(data) {
                 chat.html(data);
