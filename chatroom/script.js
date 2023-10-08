@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+const firebase = require("firebase/app");
+require("firebase/auth");
+require("firebase/database");
 
 const firebaseConfig = {
     apiKey: "AIzaSyC6IvcL_jzTZvpT8Jg6AVdJEEn7u5Ay4FA",
@@ -12,6 +13,8 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+module.exports = firebase;
 
 const chat = document.getElementById("chat");
 const messageInput = document.getElementById("message");
