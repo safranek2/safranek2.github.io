@@ -1,8 +1,8 @@
-const firebase = require("firebase/app");
-require("firebase/auth");
-require("firebase/database");
+// Import Firebase a potřebné funkce
+var firebase = require('firebase/app');
+require('firebase/database');
 
-const firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyC6IvcL_jzTZvpT8Jg6AVdJEEn7u5Ay4FA",
     authDomain: "chatroom-df69f.firebaseapp.com",
     projectId: "chatroom-df69f",
@@ -13,27 +13,23 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
 
-module.exports = firebase;
-
-const chat = document.getElementById("chat");
-const messageInput = document.getElementById("message");
-const sendButton = document.getElementById("send");
-
-sendButton.addEventListener("click", () => {
-    const message = messageInput.value;
+document.getElementById('send').addEventListener('click', function () {
+    var timestamp = Date.now();
+    var message = document.getElementById('message').value;
     if (message.trim() !== "") {
-        firebase.database().ref("messages").push({
-            text: message,
-            timestamp: firebase.database.ServerValue.TIMESTAMP
+        var newMessageRef = database.ref('messages').push();
+        newMessageRef.set({
+            timestamp: timestamp,
+            message: message
+        }, function (error) {
+            if (error) {
+                console.log('Error: Data saved unsuccessfully!');
+            } else {
+                document.getElementById('message').value = '';
+                console.log('Data saved successfully!');
+            }
         });
-        messageInput.value = "";
     }
-});
-
-firebase.database().ref("messages").on("child_added", (snapshot) => {
-    const messageData = snapshot.val();
-    const messageDiv = document.createElement("div");
-    messageDiv.textContent = messageData.text;
-    chat.appendChild(messageDiv);
 });
