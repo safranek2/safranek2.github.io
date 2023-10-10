@@ -6,7 +6,7 @@ Tento repository slouží pro zobrazení mých webových projektů veřejnosti
 
 [SPŠE Ječná Tour](https://safranek2.github.io/spsejecnatour/)<br/>
 [Chat Room](https://safranek2.github.io/chatroom/)<br/>
-[Chat Room with AJAX](https://safranek2.github.io/chatroomajax/)
+[Chat Room with AJAX (not working, because token)](https://safranek2.github.io/chatroomajax/)
 
 ## Authors
 
