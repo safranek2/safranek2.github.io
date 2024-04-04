@@ -20,13 +20,13 @@
                         <a class="nav-link" href="/eventfest/">Úvod</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="/eventfest/program.html" active>Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eventfest/misto_konani.html">Místo konání</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/eventfest/kontakt.html">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/eventfest/ubytovani.html">Ubytování</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  active" href="/eventfest/program.html" active>Program</a>
                     </li>
                 </ul>
             </div>
@@ -34,10 +34,10 @@
     </header>
 
     <main class="container mt-4">
-        <section>
+        <section id="program">
             <h2>Program</h2>
             <p>Zde najdete plánovaný program našeho festivalu:</p>
-            <ul>
+            <ul class="list-unstyled">
                 <li>10:00 - Zahájení festivalu</li>
                 <li>11:00 - Workshop: Malování na obličej</li>
                 <li>13:00 - Koncert: Lokální kapela</li>
@@ -48,12 +48,21 @@
             </ul>
             <p>Program může být změněn bez předchozího upozornění.</p>
         </section>
+
+        <section id="dalsi_udalosti">
+            <h2>Další zajímavé události</h2>
+            <ul>
+                <li><a href="https://sebevrazda.up.railway.app">Konec! - nejvíce fun event spše ječná "juchů"</a></li>
+                <li><a href="https://zavoram.neocities.org">Zůstaň doma sedět na zadku!</a></li>
+            </ul>
+        </section>
     </main>
 
     <footer class="container mt-4">
         <p class="text-center">&copy; 2024 Bezstarostný festival volného času</p>
     </footer>
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XL37HTEZSK"></script>
+    <script src="script.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
