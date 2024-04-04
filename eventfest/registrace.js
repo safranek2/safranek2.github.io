@@ -1,3 +1,5 @@
+emailjs.init("8yhnYqOd41aAGF2A6");
+
 function potvrzeniFormulare() {
     var krestniJmeno = document.getElementById("krestniJmeno").value;
     var prijmeni = document.getElementById("prijmeni").value;
@@ -15,12 +17,12 @@ function potvrzeniFormulare() {
         poznamka: poznamka
     };
 
-    emailjs.send("service_y1yq96d","template_wp4677h", dataFormulare)
-    .then(function(odpoved) {
-        console.log("Email byl úspěšně odeslán!", odpoved.status, odpoved.text);
-        alert("Registrace byla úspěšně odeslána!");
-    }, function(error) {
-        console.log("Chyba při odesílání e-mailu!", error);
-        alert("Při odesílání registrace došlo k chybě. Zkuste to prosím znovu.");
-    });
+    emailjs.send("service_y1yq96d", "template_wp4677h", dataFormulare)
+        .then(function (odpoved) {
+            console.log("Email byl úspěšně odeslán!", odpoved.status, odpoved.text);
+            alert("Registrace byla úspěšně odeslána!");
+        }, function (error) {
+            console.log("Chyba při odesílání e-mailu!", error);
+            alert("Při odesílání registrace došlo k chybě. Zkuste to prosím znovu.");
+        });
 }
