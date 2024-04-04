@@ -41,25 +41,37 @@
 
     <main class="container mt-4">
         <section id="registrace">
-            <h2>Registrace na událost</h2>
+            <h2 class="mb-4">Registrace na událost</h2>
             <form id="registracniFormular">
-                <label for="krestniJmeno">Jméno:</label><br>
-                <input type="text" id="krestniJmeno" name="krestniJmeno" required><br>
-                <label for="prijmeni">Příjmení:</label><br>
-                <input type="text" id="prijmeni" name="prijmeni" required><br>
-                <label for="telefoniCislo">Telefon:</label><br>
-                <input type="tel" id="telefoniCislo" name="telefoniCislo" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="rokNarozeni">Datum narození:</label><br>
-                <input type="date" id="rokNarozeni" name="rokNarozeni" required><br>
-                <label for="poznamka">Poznámka:</label><br>
-                <textarea id="poznamka" name="poznamka" rows="4" cols="50"></textarea><br>
-                <br>
-                <input type="button" value="Registrovat" onclick="potvrzeniFormulare()">
+                <div class="mb-3">
+                    <label for="krestniJmeno" class="form-label">Jméno:</label>
+                    <input type="text" class="form-control" id="krestniJmeno" name="krestniJmeno" required>
+                </div>
+                <div class="mb-3">
+                    <label for="prijmeni" class="form-label">Příjmení:</label>
+                    <input type="text" class="form-control" id="prijmeni" name="prijmeni" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefonniCislo" class="form-label">Telefon:</label>
+                    <input type="tel" class="form-control" id="telefonniCislo" name="telefonniCislo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rokNarozeni" class="form-label">Datum narození:</label>
+                    <input type="date" class="form-control" id="rokNarozeni" name="rokNarozeni" required>
+                </div>
+                <div class="mb-3">
+                    <label for="poznamka" class="form-label">Poznámka:</label>
+                    <textarea class="form-control" id="poznamka" name="poznamka" rows="4"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="potvrzeniFormulare()">Registrovat</button>
             </form>
         </section>
     </main>
+    
 
     <footer class="container mt-4">
         <p class="text-center">&copy; 2024 Bezstarostný festival volného času</p>
